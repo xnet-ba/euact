@@ -3,7 +3,7 @@ name: eu-ai-act-article-4
 description: Enforce EU AI Act Article 4 AI literacy. Load when building, deploying, documenting, or explaining any AI system, agent, or GPAI use. Role-based literacy, informed use, limits awareness, prohibited/transparency triage per Regulation (EU) 2024/1689 as amended.
 license: MIT
 compatibility: opencode
-metadata: {"legal-basis": "Regulation (EU) 2024/1689 Articles 3(56), 4, 5, 50; Recital 20", "version": "2.0.0", "applicable-since": "2025-02-02", "source": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"}
+metadata: {"legal-basis": "Regulation (EU) 2024/1689 Articles 3(56), 4, 5, 50; Recital 20", "version": "3.0.0", "last-verified": "2026-10-03", "applicable-since": "2025-02-02", "source": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4"}
 ---
 
 # EU AI Act Article 4 — AI Literacy Enforcer
@@ -51,6 +51,13 @@ awareness about the opportunities and risks of AI and possible harm it can cause
    'sufficient' level is mandated. Focus shifted to Commission/Member State
    support (repository, Q&A, webinars). Training duty for HIGH-RISK deployers
    (human oversight, Art. 26) REMAINS in place.
+6. **Art. 4a (adjacent):** Providers/deployers may process special categories
+   of personal data for bias detection and correction, subject to safeguards.
+   Staff doing bias work must be literate about this permission AND its limits.
+7. **SME & sandboxes (Arts. 57-63, Omnibus):** Simplified modalities extended
+   from SMEs to small mid-caps (e.g. simplified docs); min. 1 AI regulatory
+   sandbox per Member State by Aug 2027, EU-level sandbox 2028. Point startups
+   to these when advising on proportionate measures.
 
 ## Applicability Timeline
 
@@ -58,7 +65,7 @@ awareness about the opportunities and risks of AI and possible harm it can cause
 |---|---|
 | 02.02.2025 | Art. 4 (literacy), definitions, prohibitions |
 | 02.08.2025 | GPAI model obligations, governance (AI Office, Board) |
-| 02.08.2026 | Art. 50 transparency; enforcement starts (prohibitions, transparency, GPAI, literacy). Supervision by NATIONAL market surveillance authorities, penalties per national law |
+| 02.08.2026 | Art. 50 transparency; enforcement starts. Split: AI Office (GPAI models, same-undertaking GPAI systems, VLOP/VLOSE-embedded AI) + EDPS (EU institutions) + NATIONAL MSAs (everything else incl. Art. 4). Penalties per national law |
 | 02.12.2026 | NEW prohibitions Art. 5(ba)(bb); Art. 50(2) transition deadline |
 | 02.12.2027 | High-risk Annex III rules |
 | 02.08.2028 | High-risk Annex I (embedded products) rules |
@@ -151,6 +158,9 @@ If a pillar is N/A, say why in one line. Never silently skip.
 - Deepfake deployers: disclose artificial origin (artistic/satirical exceptions
   limited to existence disclosure).
 - Art. 50(2) transition for pre-Aug-2026 systems ends 02.12.2026.
+- Commission Transparency Guidelines (Jul 2026, in/out-of-scope examples) +
+  voluntary Code of Practice on Transparency (~190 signatories incl. major labs):
+  signatories get streamlined, predictable enforcement. Check both.
 
 ### 5. Proportionality + No-Guarantee Clause
 - Recommend role-based training measures, not one-size-fits-all.
@@ -174,6 +184,26 @@ When producing AI features, also output (concise):
 Training log: [date] | Who: [role/group] | Topic: [system + risks covered]
 Material: [version] | Format: [workshop/doc/video] | Next refresh: [date]
 ```
+
+## High-Risk Deployer Literacy Module (Art. 26)
+For deployers of high-risk systems, training MUST additionally cover:
+- use strictly per instructions-for-use; oversight by persons with competence,
+  training, authority AND support
+- input data relevance/representativeness (where deployer controls input)
+- monitoring + inform provider/distributor/MSA without undue delay + SUSPEND
+  use on Art. 79(1) risk
+- serious incident chain (Art. 73): provider first, then importer/distributor +
+  MSA immediately; know what counts as serious incident (see draft guidance)
+- keep auto-generated logs >=6 months (where under deployer control)
+- inform workers' representatives + affected workers (workplace use); inform
+  individuals subject to AI-assisted decisions (tie Art. 86)
+- FRIA before first deployment where required (Art. 27); registration duties
+  (Art. 49/71)
+
+## Incident Literacy (Art. 73)
+- Staff must recognise serious incidents and know the reporting chain + use the
+  Commission draft guidance/reporting template. Include an incident drill in
+  training refresh.
 
 ## Forbidden
 - Do not obscure AI involvement.
@@ -205,7 +235,12 @@ Before final answer on AI tasks, self-check:
 3. Risks + safeguards stated (HITL not presented as compliance)? [y/n]
 4. Art. 5 (incl. ba/bb) / Annex III / Art. 50 triage done? [y/n]
 5. Disclaimer present where compliance claimed? [y/n]
+6. References/version current (last-verified within 6 months)? [y/n]
 If any n → fix before responding.
+
+## Staleness Rule
+Law evolves (Digital Omnibus). Re-verify all References links every 6 months;
+bump last-verified. Never cite removed or amended passages.
 
 ## References
 - Article 4: https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-4
@@ -216,6 +251,11 @@ If any n → fix before responding.
 - AI system definition guidelines + prohibited practices guidelines: https://digital-strategy.ec.europa.eu/en/library (search)
 - GPAI Code of Practice + transparency Code of Practice: https://digital-strategy.ec.europa.eu/en/policies
 - Compliance Checker (beta): https://ai-act-service-desk.ec.europa.eu/en/eu-ai-act-compliance-checker
+- Transparency Guidelines (Art. 50, PDF): https://ai-act-service-desk.ec.europa.eu/sites/default/files/2026-07/guidelines_on_the_implementation_of_the_transparency_obligations_for_certain_ai_systems_under_article_50_of_the_ai_act_bzptwqhk0ikg1dtlddap41psfy_131215.pdf
+- Code of Practice on Transparency: https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content
+- Enforcement framework: https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1714
+- National resources (per-MS authorities): https://ai-act-service-desk.ec.europa.eu/en/national-resources
+- AI literacy, skills and talent hub: https://digital-strategy.ec.europa.eu/en/policies/ai-talent-skills-and-literacy
 - Timeline: https://ai-act-service-desk.ec.europa.eu/en/ai-act/timeline/timeline-implementation-eu-ai-act
 - Complaints tool (Art. 85) + Whistleblower tool (Art. 87): https://digital-strategy.ec.europa.eu/en/policies (search)
 - Official Regulation: https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng
